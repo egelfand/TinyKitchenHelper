@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tinykitchenhelper"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.tinykitchenhelper.EntryPage"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.tinykitchenhelper.OptionsPage"
+            android:label="@string/title_activity_options_page"
+            android:parentActivityName="com.example.tinykitchenhelper.EntryPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tinykitchenhelper.EntryPage" />
+        </activity>
+        <activity
+            android:name="com.example.tinykitchenhelper.MealManager"
+            android:label="@string/title_activity_meal_manager"
+            android:parentActivityName="com.example.tinykitchenhelper.OptionsPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tinykitchenhelper.OptionsPage" />
+        </activity>
+        <activity
+            android:name="com.example.tinykitchenhelper.ProfileManager"
+            android:label="@string/title_activity_profile_manager"
+            android:parentActivityName="com.example.tinykitchenhelper.OptionsPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tinykitchenhelper.OptionsPage" />
+        </activity>
+        <activity
+            android:name="com.example.tinykitchenhelper.ShoppingManager"
+            android:label="@string/title_activity_shopping_manager"
+            android:parentActivityName="com.example.tinykitchenhelper.OptionsPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tinykitchenhelper.OptionsPage" />
+        </activity>
+        <activity
+            android:name="com.example.tinykitchenhelper.KitchenManager"
+            android:label="@string/title_activity_kitchen_manager"
+            android:parentActivityName="com.example.tinykitchenhelper.OptionsPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tinykitchenhelper.OptionsPage" />
+        </activity>
+        <activity
+            android:name="com.example.tinykitchenhelper.RecipeManager"
+            android:label="@string/title_activity_recipe_manager"
+            android:parentActivityName="com.example.tinykitchenhelper.OptionsPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tinykitchenhelper.OptionsPage" />
+        </activity>
+        <activity
+            android:name="com.example.tinykitchenhelper.RecipeObject"
+            android:label="@string/title_activity_recipe_object" >
+        </activity>
+        <activity
+            android:name="com.example.tinykitchenhelper.AddRecipe"
+            android:label="@string/title_activity_add_recipe" >
+        </activity>
+    </application>
+
+</manifest>
