@@ -6,10 +6,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 
 public class OptionsPage extends Activity {
 	TextView overText;
@@ -21,7 +19,6 @@ public class OptionsPage extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_options_page);
 		context = this;
-		setupActionBar();// Show the Up button in the action bar. (Autogen)
 		overText = (TextView) findViewById(R.id.options); //top of the page
 		profile = (Button) findViewById(R.id.profile);
 		profile.setOnClickListener(new OnClickListener() {
@@ -63,15 +60,5 @@ public class OptionsPage extends Activity {
 				startActivity(intent);
 			}
 		});
-	}
-
-	/**
-	 * Set up the {@link android.app.ActionBar}, if the API is available.
-	 */
-	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
-	private void setupActionBar() {
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-			getActionBar().setDisplayHomeAsUpEnabled(true);
-		}
 	}
 }//end OptionsPage
